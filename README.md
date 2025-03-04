@@ -5,3 +5,5 @@
 ### i write all about myself in this website ###
 
 ### i wish with made this web, i will growth up to be a software enginerring profesionall ###
+
+# this website used for learn about math, bitcoin, and web design #
