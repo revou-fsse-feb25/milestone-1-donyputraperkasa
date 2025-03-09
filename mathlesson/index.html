@@ -5,25 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>math lesson</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
 
 </head>
-<body class="flex flex-col min-height: 100vh xs:bg-white sm:bg-white md:bg-white lg:bg-white xl:bg-white">
-    <header class="bg-white shadow-xl">
+<body class="bg-gray-100">
+    <header class="bg-white shadow-md w-full fixed">
         <div class="text-white bg-orange-500 text-center p-3 font-bold">mulaidariNOL with donyputraperkas</div>
         <div class="flex justify-between px-[24px] py-[16px] items-center">
             <a href="/milestone-1-donyputraperkasa/index.html"><img src="/milestone-1-donyputraperkasa/image/mulaidariNOL.png" width="200px" alt=""></a>
-            <button class="lg:hidden">
+
+            <button id="open-button" class="lg:hidden" onclick="openSidebar()">
+
                 <i class="fa-solid fa-bars"></i>
             </button>
             <nav class="max-lg:hidden">
                 <ul class="flex gap-8">
-                    <li class="p-2 m-2"><a href="/milestone-1-donyputraperkasa/index.html">home</a></li>
-                    <li class="p-2 m-2"><a href="/milestone-1-donyputraperkasa/aboutme/index.html">about me</a></li>
-                    <li class="p-2 m-2  font-bold text-1xl bg-orange-500 text-white rounded-lg"><a href="/milestone-1-donyputraperkasa/mathlesson/index.html">math lesson</a></li>
-                    <li class="p-2 m-2"><a href="/milestone-1-donyputraperkasa/marketanalysis/index.html">market analysis</a></li>
-                    <li class="p-2 m-2"><a href="/milestone-1-donyputraperkasa/webdesign/index.html">web design</a></li>
-                    <li class="p-2 m-2"><a href="/milestone-1-donyputraperkasa/login/index.html">login</a></li>
+                    <li><a href="/milestone-1-donyputraperkasa/index.html">home</a></li>
+                    <li><a href="/milestone-1-donyputraperkasa/aboutme/index.html">about me</a></li>
+                    <li><a href="/milestone-1-donyputraperkasa/mathlesson/index.html">math lesson</a></li>
+                    <li><a href="/milestone-1-donyputraperkasa/marketanalysis/index.html">market analysis</a></li>
+                    <li><a href="/milestone-1-donyputraperkasa/login/index.html">login</a></li>
                 </ul>
             </nav>
             <div class="search-bar max-lg:hidden">
@@ -33,284 +34,262 @@
         </div>
     </header>
 
-     <div class="container shadow-xl rounded-xl m-6 p-6 bg-white px-[16px] py-[24px] mx-auto">
-        <h3 class="text-2xl font-bold mb-[24px]">private math lesson</h3>
-        <div class="flex gap-2">
-            <div class="flex gap-2">
-                <img src="/milestone-1-donyputraperkasa/image/aku.jpg" class="w-[100px] h-[100px] rounded-full m-4 p-4" alt="">
-            </div>
-            <div class="gap-2">
-                <h4 class="text-xl font-bold mb-[24px]">math lesson </h4>
-                <p> you many problem about math ?? you find the confusing part ?? or you have a many question about math and you need a private teacher to learn you about math ?? </p>
-                    <p>this is website give you solution to find a private teacher.</p>
-                    <p>Im Mathematician, and i have more than 5 years experience in this field. and i have many trick to answer any question about math, and i will learn you for leason. if you interested, fill the form below.</p>
-            </div>
-        </div>
+    <!-- ini bagian sidebar nya -->
+    <div id="sidebar" class="bg-white w-[240px] h-screen fixed top p-8 shadow-xl ml-[-100%] transition-[margin-left] duration-300 ease-in-out">
+
+        <button id="close-button" class="absolute top-4 right-4" onclick="closeSidebar()">
+
+            <i class="fa-solid fa-close absolute top-4 right-4"></i>
+        </button>
+        <nav>
+            <ul >
+                <a href="/milestone-1-donyputraperkasa/index.html"><img src="/gambar/mulaidariNOL.png" width="100px" alt=""></a>
+                <br> <br>
+                <li class="py-2"><a href="/milestone-1-donyputraperkasa/index.html">home</a></li>
+                <li class="py-2"><a href="/milestone-1-donyputraperkasa/aboutme/index.html">about me</a></li>
+                <li  class="py-2"><a href="/milestone-1-donyputraperkasa/mathlesson/index.html">math lesson</a></li>
+                <li  class="py-2"><a href="/milestone-1-donyputraperkasa/marketanalysis/index.html">market analysis</a></li>
+                <li  class="py-2"><a href="/milestone-1-donyputraperkasa/login/index.html">login</a></li>
+            </ul>
+        </nav>
     </div>
 
-    <main class="container px-[16px] mx-auto py-24 lg:flex lg:gap-4">
-        <div>
-            <main class="container px-[16px] mx-auto py-24 lg:flex lg:gap-4">
-                <div>
-                    <section>
-                        <h2 class="text-3xl font-bold mb-[24px]">owner</h2>
-                        <ul>
-                            <li class="shadow-md rounded-xl bg-white mb-6 overflow-hidden">
-                                <div>
-                                    <img class="max-h-[200px] w-full object-cover" src="/milestone-1-donyputraperkasa/image/bubududu.jpeg" alt="bubu dudu" >
-                                </div>
-                                <div class="p-[24px]">
-                                    <h3 class="text-xl font-bold mb-[24px]">dony putra perkasa</h3>
-                                    <p>algebra</p>
-                                    <p>calculus</p>
-                                    <p>statistika</p>
-                                    <p>geometri</p>
-                                    <p>analisis</p>
-                                    <br>
-                                    <a class="text-blue-600" href="/milestone-1-donyputraperkasa/aboutme/index.html">read more</a>
-                                </div>
-                            </li>
-                        </ul>
-                    </section>
-                </div>
-            </main>
-        </div>
+    <!-- bagian main -->
 
-        <div class="flex justify-center flex-row gap-10 m-3 p-6 mx-auto max-w text-center text-gray-900 bg-white rounded-lg border border-gray-100 shadow dark:border-gray-600 xl:p-8 dark:bg-gray-800 dark:text-white w-[50%]">
-            <section class="m-3 p-3">
-                <h2 class="font-bold text-2xl">Form to join</h2>
-                <form action="backend.com" method="POST">
-                    <table class="border-separate border-spacing-3 w-full border border-gray-400 dark:border-gray-500" width="80%">
-                        <thead>
-                            <tr>
-                              <th class="border border-gray-300 ...">questions</th>
-                              <th class="border border-gray-300 ...">your answer</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                              <tr>
-                                  <td class="border border-gray-300 ..."><label for="full name">full name</label=></td>
-                                  <td class="border border-gray-300 ..."><input type="text" placeholder=" input your full name" id="full name" required></td>
-                              </tr>
-                              <tr>
-                                  <td class="border border-gray-300 ..."><label for="call name">call name</label></td>
-                                  <td class="border border-gray-300 ..."><input type="text" placeholder=" input your call name" id="call name" required></td>
-                              </tr>
-                              <tr>
-                                  <td class="border border-gray-300 ..."> gender</td>
-                                  <td class="border border-gray-300 ...">
-                                      <gender>
-                                          <input type="radio" name="gender"> male
-                                          <input type="radio" name="gender"> female
-                                      </gender>
-                                  </td>
-                              </tr>
-                              <tr>
-                                  <td class="border border-gray-300 ..."><label for="contact">contact</label></td>
-                                  <td class="border border-gray-300 ..."><input type="text" placeholder=" input your contact" id="contact" required></td>
-                              </tr>
-                              <tr>
-                                  <td class="border border-gray-300 ..."><label for="your address">your address</label></td>
-                                  <td class="border border-gray-300 ..."><input type="text" placeholder=" input your address" id="your address" required></td>
-                              </tr>
-                              <tr>
-                                  <td class="border border-gray-300 ...">level school</td>
-                                  <td class="border border-gray-300 ...">
-                                      <select name="level school">
-                                      <option>Elementary School</option>
-                                      <option>Junior High Shool</option>
-                                      <option>Senior High School</option>
-                                      <option>Vocantionary High School</option>
-                                  </td>
-                              </tr>
-                              <tr>
-                                  <td class="border border-gray-300 ...">day to learn</td>
-                                  <td class="border border-gray-300 ...">
-                                      <select name="day to learn">
-                                          <option>Monday</option>
-                                          <option>Tuesday</option>
-                                          <option>Wednesday</option>
-                                          <option>Thursday</option>
-                                          <option>Friday</option>
-                                          <option>Saturday</option>
-                                          <option>Sunday</option>
-                                      </select>
-                                  </td>
-                              </tr>
-                              <tr>
-                                  <td class="border border-gray-300 ...">time to learn</td>
-                                  <td class="border border-gray-300 ...">
-                                      <select name="time to learn">
-                                          <option>15:00 - 16:30</option>
-                                          <option>18:00 - 19:30</option>
-                                          <option>20:00 - 21:30</option>
-                                      </select>
-                                  </td>
-                              </tr>
-                              <tr>
-                                  <td class="border border-gray-300 ...">place to learn</td>
-                                  <td class="border border-gray-300 ...">
-                                      <select name="place to learn">
-                                          <option>online</option>
-                                          <option>offline at my home</option>
-                                          <option>offline at your home</option>
-                                          <option>offline by appointment</option>
-                                      </select>
-                                  </td>
-                              </tr>
-                              <tr>
-                                  <td class="border border-gray-300 ...">start leason</td>
-                                  <td class="border border-gray-300 ...">
-                                      <input type="date" name="start leason">
-                                  </td>
-                              </tr>
-                        </tbody>
-                      </table>
-                    <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4"><input type="submit" value="submit"></button>
-                    <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4"><input type="reset" value="reset"></button>
-                </form>
-            </section>  
-        </div>
-    </main>
-    
-        <!-- <main class="m-3 p-5">
-            <h1 class="font-bold text-3xl">form private math leason</h1>
-            <p> you many problem about math ?? you find the confusing part ?? or you have a many question about math and you need a private teacher to learn you about math ?? </p>
+    <!-- ATAS -->
+    <main class="container px-[16px] lg:flex lg:gap-4 mx-auto py-40">
+    <!-- kiri -->
+    <div class="shadow-md rounded-xl bg-white px-[16px] py-[24px] lg:w-[40%] m-1">
+        <h2 class="font-bold text-2xl mb-5">private math lesson</h2>
+        <p> you many problem about math ?? you find the confusing part ?? or you have a many question about math and you need a private teacher to learn you about math ?? </p>
             <p>this is website give you solution to find a private teacher.</p>
             <p>Im Mathematician, and i have more than 5 years experience in this field. and i have many trick to answer any question about math, and i will learn you for leason. if you interested, fill the form below.</p>
-        </main> -->
- 
-
-    <!-- <div class="flex justify-center items-center">
-        <section class="m-3 p-5 bg-gray-100 ">
-            <h2 class="font-bold text-2xl">Payment</h2>
-                <ul class="list-disc list-inside m-3">
-                    <li>please full pay before start leason</li>
-                    <li>for 4 meetings learning = 240.000 </li>
-                    <li>for 8 meetings learning = 450.000</li>
-                    <li>payment methode = cash or transfer</li>
-                    <ul class="list-disc list-inside m-3">
-                        <li> mandiri  : 1234.0000.0000.0000</li>
-                        <li> bca  : 1234.0000.0000.0000</li>
-                        <li> shopee pay  : 1234.0000.0000.0000</li>
-                        <li> gopay  : 1234.0000.0000.0000</li>
-                    </ul>
-                    <li>after transfer, please send receipt to : </li>
-                    <ul class="list-disc list-inside m-3">
-                        <li> email : donyputraperkasa@gmail.com    </li>
-                        <li> whatsapp : 0822.36343404</li>
-                    </ul>
-                </ul>
-        </section>
-
-        
-        <section class="m-3 p-3 bg-gray-100 w-80">
-            <h2 class="font-bold text-2xl">Rules for Leason</h2>
-                <ul class="list-disc list-inside m-3">
-                    <li>leason for 90 minutes</li>
-                    <li>leason for 1 month, and if you want to continue this leason, fill the form again</li>
-                    <li>on time for the leason</li>
-                    <li>4 days leason for 1 mount</li>
-                    <li>please full pay before start leason</li>
-                </ul>
-        </section>
-    </div> -->
-
-<!-- batas -->
-    <div class="flex justify-center flex-row gap-4 m-3 p-6 mx-auto max-w text-center text-gray-900 bg-white rounded-lg border border-gray-100 shadow dark:border-gray-600 xl:p-8 dark:bg-gray-800 dark:text-white">
-            <div class="shadow-md rounded-xl bg-white px-[16px] py-[24px] m-4 max-w-lg gap-4">
-                <h2 class="font-bold text-2xl">Education</h2>
-                <p>==========================================</p>
-                <div class="list-disc text-left m-3">
-                    <ul class="list-disc list-inside m-3">
-                            <li>SD Kanisius</li>
-                            <li>SMP Negeri 2 Yogyakarta</li>
-                            <li>SMA Negeri 6 Yogyakarta</li>
-                            <li>S1 Matematika Universitas Gadjah Mada Yogyakarta</li>
-                    </ul>
-                </div>
-            </div>
-        
-            <div class="shadow-md rounded-xl bg-white px-[16px] py-[24px] m-4 max-w-lg mx-auto">
-                <h2 class="font-bold text-2xl">payment method</h2>
-                <p>==========================================</p>
-                <div class="list-disc text-left m-3">
-                    <ul class="list-disc list-inside m-3">
-                        <li>please full pay before start leason</li>
-                        <li>for 4 meetings learning = 240.000 </li>
-                        <li>for 8 meetings learning = 450.000</li>
-                        <li>payment methode = cash or transfer</li>
-                        <ul class="list-disc list-inside m-3">
-                            <li> mandiri  : 1234.0000.0000.0000</li>
-                            <li> bca  : 1234.0000.0000.0000</li>
-                            <li> shopee pay  : 1234.0000.0000.0000</li>
-                            <li> gopay  : 1234.0000.0000.0000</li>
-                        </ul>
-                        <li>after transfer, please send receipt to : </li>
-                        <ul class="list-disc list-inside m-3">
-                            <li> email : donyputraperkasa@gmail.com    </li>
-                            <li> whatsapp : 0822.36343404</li>
-                        </ul>
-                    </ul>
-                </div>
-            </div>
-        
-            <div class="shadow-md rounded-xl bg-white px-[16px] py-[24px] m-4 mx-auto max-w-lg gap-4">
-                <h2 class="font-bold text-2xl">Rules Lessson</h2>
-                <p>==========================================</p>
-                <div class="list-disc text-left m-3">
-                    <li>leason for 90 minutes</li>
-                    <li>leason for 1 month, and if you want to continue this leason, fill the form again</li>
-                    <li>on time for the leason</li>
-                    <li>4 days leason for 1 mount</li>
-                    <li>please full pay before start leason</li>
-                </div>
-            </div> 
     </div>
 
-<!-- batas -->
-
-    <div class="flex justify-center flex-row gap-10 m-3 p-6 mx-auto max-w text-center text-gray-900 bg-white rounded-lg border border-gray-100 shadow dark:border-gray-600 xl:p-8 dark:bg-gray-800 dark:text-white">
-        <section class="gap-3 flex flex-col p-6 mx-5 max-w-lg text-center text-gray-900 bg-white rounded-lg border border-gray-100 shadow white:border-gray-600 xl:p-8 white:bg-gray-800 white:text-dark">
-            <p class="font-bold text-2xl">beginer</p>
-            <p> =============================</p>
-            <p class="font-bold text-2xl">$59/ month</p>
-            <p>free tutorial</p>
-            <p>fee 0%</p>
-            <p>free update news</p>
-            <p>free insight</p>
-            <p>24/7 support</p>
-            <br>
-            <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white p-3 m-3 w-auto rounded-lg">subscribe</button>
-        </section>
-        <section class="gap-3 flex flex-col p-6 mx-5 max-w-lg text-center text-gray-900 bg-white rounded-lg border border-gray-100 shadow white:border-gray-600 xl:p-8 white:bg-gray-800 white:text-dark">
-            <p class="font-bold text-2xl">basic</p>
-            <p> =============================</p>
-            <p class="font-bold text-2xl">$99/ month</p>
-            <p>free tutorial</p>
-            <p>fee 0%</p>
-            <p>free update news</p>
-            <p>free insight</p>
-            <p>24/7 support</p>
-            <br>
-            <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white p-3 m-3 w-auto rounded-lg">subscribe</button>
-        </section>
-        <section class="gap-3 flex flex-col p-6 mx-5 max-w-lg text-center text-gray-900 bg-white rounded-lg border border-gray-100 shadow white:border-gray-600 xl:p-8 white:bg-gray-800 white:text-dark">
-            <p class="font-bold text-2xl">pro</p>
-            <p> =============================</p>
-            <p class="font-bold text-2xl">$149/ month</p>
-            <p>free tutorial</p>
-            <p>fee 0%</p>
-            <p>free update news</p>
-            <p>free insight</p>
-            <p>24/7 support</p>
-            <br>
-            <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white p-3 m-3 w-auto rounded-lg">subscribe</button>
-        </section>
+    <!-- tengah -->
+    <div class="shadow-md rounded-xl bg-white px-[16px] py-[24px] lg:w-[20%] m-1">
+        <h2 class="font-bold text-2xl mb-5">owner</h2>
+        <h3 class="text-xl font-bold mb-[24px]">dony putra perkasa</h3>
+        <ul>
+            <li class="list-disc list-inside">calculus</li>
+            <li class="list-disc list-inside">statistika</li>
+            <li class="list-disc list-inside">geometri</li>
+            <li class="list-disc list-inside">analisis</li>
+            <li class="list-disc list-inside">algebra</li>
+        </ul>
+        <br>
+        <a class="text-blue-600" href="/milestone-1-donyputraperkasa/aboutme/index.html">read more</a>
     </div>
-     
-    <footer class="text-white sm:bg-orange-500 md:bg-orange-500 lg:bg-orange-500 xl:bg-orange-500 text-center p-3 font-bold position:absolute">
+
+    <!-- kanan-->
+    <div class="shadow-md rounded-xl bg-white px-[16px] py-[24px] lg:w-[40%] m-1">
+        <h2 class="font-bold text-2xl mb-5">form to join</h2>
+        <form action="backend.com" method="POST">
+            <table class="border-separate border-spacing-3 w-full border border-gray-400 dark:border-gray-500" width="80%">
+                <thead>
+                    <tr>
+                      <th class="border border-gray-300 ...">questions</th>
+                      <th class="border border-gray-300 ...">your answer</th>
+                    </tr>
+                </thead>
+                <tbody>
+                      <tr>
+                          <td class="border border-gray-300 ..."><label for="full name">full name</label=></td>
+                          <td class="border border-gray-300 ..."><input type="text" placeholder=" input your full name" id="full name" required></td>
+                      </tr>
+                      <tr>
+                          <td class="border border-gray-300 ..."><label for="call name">call name</label></td>
+                          <td class="border border-gray-300 ..."><input type="text" placeholder=" input your call name" id="call name" required></td>
+                      </tr>
+                      <tr>
+                          <td class="border border-gray-300 ..."> gender</td>
+                          <td class="border border-gray-300 ...">
+                              <gender>
+                                  <input type="radio" name="gender"> male
+                                  <input type="radio" name="gender"> female
+                              </gender>
+                          </td>
+                      </tr>
+                      <tr>
+                          <td class="border border-gray-300 ..."><label for="contact">contact</label></td>
+                          <td class="border border-gray-300 ..."><input type="text" placeholder=" input your contact" id="contact" required></td>
+                      </tr>
+                      <tr>
+                          <td class="border border-gray-300 ..."><label for="your address">your address</label></td>
+                          <td class="border border-gray-300 ..."><input type="text" placeholder=" input your address" id="your address" required></td>
+                      </tr>
+                      <tr>
+                          <td class="border border-gray-300 ...">level school</td>
+                          <td class="border border-gray-300 ...">
+                              <select name="level school">
+                              <option>Elementary School</option>
+                              <option>Junior High Shool</option>
+                              <option>Senior High School</option>
+                              <option>Vocantionary High School</option>
+                          </td>
+                      </tr>
+                      <tr>
+                          <td class="border border-gray-300 ...">day to learn</td>
+                          <td class="border border-gray-300 ...">
+                              <select name="day to learn">
+                                  <option>Monday</option>
+                                  <option>Tuesday</option>
+                                  <option>Wednesday</option>
+                                  <option>Thursday</option>
+                                  <option>Friday</option>
+                                  <option>Saturday</option>
+                                  <option>Sunday</option>
+                              </select>
+                          </td>
+                      </tr>
+                      <tr>
+                          <td class="border border-gray-300 ...">time to learn</td>
+                          <td class="border border-gray-300 ...">
+                              <select name="time to learn">
+                                  <option>15:00 - 16:30</option>
+                                  <option>18:00 - 19:30</option>
+                                  <option>20:00 - 21:30</option>
+                              </select>
+                          </td>
+                      </tr>
+                      <tr>
+                          <td class="border border-gray-300 ...">place to learn</td>
+                          <td class="border border-gray-300 ...">
+                              <select name="place to learn">
+                                  <option>online</option>
+                                  <option>offline at my home</option>
+                                  <option>offline at your home</option>
+                                  <option>offline by appointment</option>
+                              </select>
+                          </td>
+                      </tr>
+                      <tr>
+                          <td class="border border-gray-300 ...">start leason</td>
+                          <td class="border border-gray-300 ...">
+                              <input type="date" name="start leason">
+                          </td>
+                      </tr>
+                </tbody>
+              </table>
+            <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4"><input type="submit" value="submit"></button>
+            <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4"><input type="reset" value="reset"></button>
+        </form>
+    </div>
+    </main>
+
+    <!-- TENGAH -->
+    <div class="container px-[16px] lg:flex lg:gap-4 mx-auto py-10">
+<!-- kiri -->
+    <div class="shadow-md rounded-xl bg-white px-[16px] py-[24px] lg:w-[30%] m-1">
+        <h2 class="font-bold text-2xl mb-5">education</h2>
+        <p>==========================================</p>
+            <ul class="list-disc list-inside m-3">
+            <li>SD Kanisius</li>
+            <li>SMP Negeri 2 Yogyakarta</li>
+            <li>SMA Negeri 6 Yogyakarta</li>
+            <li>S1 Matematika Universitas Gadjah Mada Yogyakarta</li>
+        </ul>
+</div>
+        
+<!-- tengah -->
+<div class="shadow-md rounded-xl bg-white px-[16px] py-[24px] lg:w-[40%] m-1">
+    <h2 class="font-bold text-2xl mb-5">payment method</h2>
+    <p>==========================================</p>
+    <div class="list-disc text-left m-3">
+        <ul class="list-disc list-inside m-3">
+            <li>please full pay before start leason</li>
+            <li>for 4 meetings learning = 240.000 </li>
+            <li>for 8 meetings learning = 450.000</li>
+            <li>payment methode = cash or transfer</li>
+            <br>
+            <ul class="list-disc list-inside m-3">
+                <li> mandiri  : 1234.0000.0000.0000</li>
+                <li> bca  : 1234.0000.0000.0000</li>
+                <li> shopee pay  : 1234.0000.0000.0000</li>
+                <li> gopay  : 1234.0000.0000.0000</li>
+            </ul>
+            <li>after transfer, please send receipt to : </li>
+            <ul class="list-disc list-inside m-3">
+                <li> email : donyputraperkasa@gmail.com    </li>
+                <li> whatsapp : 0822.36343404</li>
+            </ul>
+        </ul>
+    </div>
+</div>
+        
+<!-- kanan-->
+<div class="shadow-md rounded-xl bg-white px-[16px] py-[24px] lg:w-[30%] m-1">
+    <h2 class="font-bold text-2xl mb-5">rules lesson</h2>
+    <p>==========================================</p>
+        <div class="list-disc text-left m-3">
+            <li>leason for 90 minutes</li>
+            <li>leason for 1 month, and if you want to continue this leason, fill the form again</li>
+            <li>on time for the leason</li>
+            <li>4 days leason for 1 mount</li>
+            <li>please full pay before start leason</li>
+        </div>
+</div>
+    </div>
+
+    <!-- BAWAH -->
+    <div class="container px-[16px] lg:flex lg:gap-4 mx-auto py-10 justify-center">
+<!-- kiri -->
+<section class="gap-3 flex flex-col p-6 mx-5 max-w-lg text-center text-gray-900 bg-white rounded-lg border border-gray-100 shadow white:border-gray-600 xl:p-8 white:bg-gray-800 white:text-dark mb-5">
+    <p class="font-bold text-2xl">beginer</p>
+    <p> =============================</p>
+    <p class="font-bold text-2xl">$59/ month</p>
+    <p>free tutorial</p>
+    <p>fee 0%</p>
+    <p>free update news</p>
+    <p>free insight</p>
+    <p>24/7 support</p>
+    <br>
+    <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white p-3 m-3 w-auto rounded-lg">subscribe</button>
+</section>
+
+<!-- tengah -->
+<section class="gap-3 flex flex-col p-6 mx-5 max-w-lg text-center text-gray-900 bg-white rounded-lg border border-gray-100 shadow white:border-gray-600 xl:p-8 white:bg-gray-800 white:text-dark mb-5">
+    <p class="font-bold text-2xl">basic</p>
+    <p> =============================</p>
+    <p class="font-bold text-2xl">$99/ month</p>
+    <p>free tutorial</p>
+    <p>fee 0%</p>
+    <p>free update news</p>
+    <p>free insight</p>
+    <p>24/7 support</p>
+    <br>
+    <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white p-3 m-3 w-auto rounded-lg">subscribe</button>
+</section>
+
+<!-- kanan -->
+<section class="gap-3 flex flex-col p-6 mx-5 max-w-lg text-center text-gray-900 bg-white rounded-lg border border-gray-100 shadow white:border-gray-600 xl:p-8 white:bg-gray-800 white:text-dark mb-5">
+    <p class="font-bold text-2xl">pro</p>
+    <p> =============================</p>
+    <p class="font-bold text-2xl">$149/ month</p>
+    <p>free tutorial</p>
+    <p>fee 0%</p>
+    <p>free update news</p>
+    <p>free insight</p>
+    <p>24/7 support</p>
+    <br>
+    <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white p-3 m-3 w-auto rounded-lg">subscribe</button>
+</section>
+    </div>
+
+    <!-- bagian footer -->
+    <footer class="text-white bg-orange-500 text-center p-3 font-bold position:absolute bottom-0 left-0 right-0">
         <p>copyright &copy; 2024 mulaidariNOL</p>
     </footer>
+
+    <script>
+
+       function openSidebar() {
+        document.getElementById("sidebar").classList.remove("ml-[-100%]");
+       }
+
+       function closeSidebar() {
+        document.getElementById("sidebar").classList.add("ml-[-100%]");
+       }
+    </script>
 </body>
 </html>

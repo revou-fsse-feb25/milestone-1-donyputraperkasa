@@ -4,26 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>about me</title>
-    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
 
 </head>
-<body class="flex flex-col min-height: 100vh xs:bg-white sm:bg-white md:bg-white lg:bg-white xl:bg-white">
-    <header class="bg-white shadow-xl">
+<body class="bg-gray-100">
+    <header class="bg-white shadow-xl w-full fixed">
         <div class="text-white bg-orange-500 text-center p-3 font-bold">mulaidariNOL with donyputraperkas</div>
         <div class="flex justify-between px-[24px] py-[16px] items-center">
             <a href="/milestone-1-donyputraperkasa/index.html"><img src="/milestone-1-donyputraperkasa/image/mulaidariNOL.png" width="200px" alt=""></a>
-            <button class="lg:hidden">
+
+            <button id="open-button" class="lg:hidden" onclick="openSidebar()">
+
                 <i class="fa-solid fa-bars"></i>
             </button>
             <nav class="max-lg:hidden">
                 <ul class="flex gap-8">
-                    <li class="p-2 m-2"><a href="/milestone-1-donyputraperkasa/index.html">home</a></li>
-                    <li class="p-2 m-2 font-bold text-1xl bg-orange-500 text-white rounded-lg"><a href="/milestone-1-donyputraperkasa/aboutme/index.html">about me</a></li>
-                    <li class="p-2 m-2"><a href="/milestone-1-donyputraperkasa/mathlesson/index.html">math lesson</a></li>
-                    <li class="p-2 m-2"><a href="/milestone-1-donyputraperkasa/marketanalysis/index.html">market analysis</a></li>
-                    <li class="p-2 m-2"><a href="/milestone-1-donyputraperkasa/webdesign/index.html">web design</a></li>
-                    <li class="p-2 m-2"><a href="/milestone-1-donyputraperkasa/login/index.html">login</a></li>
+                    <li><a href="/milestone-1-donyputraperkasa/index.html">home</a></li>
+                    <li><a href="/milestone-1-donyputraperkasa/aboutme/index.html">about me</a></li>
+                    <li><a href="/milestone-1-donyputraperkasa/mathlesson/index.html">math lesson</a></li>
+                    <li><a href="/milestone-1-donyputraperkasa/marketanalysis/index.html">market analysis</a></li>
+                    <li><a href="/milestone-1-donyputraperkasa/login/index.html">login</a></li>
                 </ul>
             </nav>
             <div class="search-bar max-lg:hidden">
@@ -33,9 +34,31 @@
         </div>
     </header>
 
-    <main class="flex">
-        <div class="shadow-md rounded-xl bg-white px-[16px] py-[24px] m-4 max-w-lg">
-            <h2 class="font-bold text-2xl">about dony putra perkasa</h2>
+    <!-- ini bagian sidebar nya -->
+    <div id="sidebar" class="bg-white w-[240px] h-screen fixed top p-8 shadow-xl ml-[-100%] transition-[margin-left] duration-300 ease-in-out">
+
+        <button id="close-button" class="absolute top-4 right-4" onclick="closeSidebar()">
+
+            <i class="fa-solid fa-close absolute top-4 right-4"></i>
+        </button>
+        <nav>
+            <ul >
+                <a href="/milestone-1-donyputraperkasa/index.html"><img src="/gambar/mulaidariNOL.png" width="100px" alt=""></a>
+                <br> <br>
+                <li class="py-2"><a href="/milestone-1-donyputraperkasa/index.html">home</a></li>
+                <li class="py-2"><a href="/milestone-1-donyputraperkasa/aboutme/index.html">about me</a></li>
+                <li  class="py-2"><a href="/milestone-1-donyputraperkasa/mathlesson/index.html">math lesson</a></li>
+                <li  class="py-2"><a href="/milestone-1-donyputraperkasa/marketanalysis/index.html">market analysis</a></li>
+                <li  class="py-2"><a href="/milestone-1-donyputraperkasa/login/index.html">login</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- bagian aboutme -->
+    <main class="container px-[16px] lg:flex lg:gap-4 mx-auto py-40">
+        <!-- kiri -->
+        <div class="shadow-md rounded-xl bg-white px-[16px] py-[24px] m-4 max-w-lg mx-auto">
+            <h2 class="font-bold text-2xl mb-5">about dony putra perkasa</h2>
             <p>hello, i say to you WELLCOME IN MY WEBSITE. now you will be know more about me (dony putra perkasa)</p>
             <div class="flex gap-2">
                 <img src="/milestone-1-donyputraperkasa/image/aku.jpg" alt="dony putra perkasa" width="160" height="200"> </p>
@@ -51,62 +74,48 @@
                 </ul>
             </div>
         </div>
-    
+
+        <!-- tengah -->
         <div class="shadow-md rounded-xl bg-white px-[16px] py-[24px] m-4 max-w-lg mx-auto">
-            <h2 class="font-bold text-2xl">work experience</h2>
+            <h2 class="font-bold text-2xl mb-5">work experience</h2>
             <p> After graduate from univercity, i get first job in digital printing company in Jogjakarta at 2019. i will get 4 years experience until the end ofcovid 19 ended. and then i will be find my experience to work in Yayasan BOPKRI until now.</p>
         </div>
-    
-        <div class="shadow-md rounded-xl bg-white px-[16px] py-[24px] m-4 mx-auto max-w-lg">
-            <h2 class="font-bold text-2xl">hobbies</h2>
+
+        <!-- kanan -->
+        <div class="shadow-md rounded-xl bg-white px-[16px] py-[24px] m-4 max-w-lg mx-auto">
+            <h2 class="font-bold text-2xl mb-5">hobbies</h2>
             <p>now i can tell you about my hobbies</p>
             <li> Reading. every morning after wake up, i will be read the  news. i can do it since i studied in univercity</li>
             <li>Listen Music. for this hobbies started when i 15th years old. And my favorite sing i give you link to hear</li>
         </div>
     </main>
 
-    
-
-    <!-- <div class="m-4 p-4"> -->
-        <!-- <main class="m-3 p-3">
-            <h1 class="font-bold text-2xl">About Dony Putra Perkasa</h1>
-            <p>hello, i say to you WELLCOME IN MY WEBSITE. now you will be know more about me (dony putra perkasa) <img src="/milestone-1-donyputraperkasa/image/aku.jpg" alt="dony putra perkasa" width="160" height="200"> </p>
-        </main>
-
-        <section class="m-3 p-3">
-            <h2 class="font-bold text-2xl">Education</h2>
-            <ul class="list-disc list-inside m-3">
-                    <li>SD Kanisius</li>
-                    <li>SMP Negeri 2 Yogyakarta</li>
-                    <li>SMA Negeri 6 Yogyakarta</li>
-                    <li>S1 Matematika Universitas Gadjah Mada Yogyakarta</li>
-            </ul>
-        </section> -->
-    
-        <!-- <section>
-            <h2 class="font-bold text-2xl">Work Experience</h2>
-            <p> After graduate from univercity, i get first job in digital printing company in Jogjakarta at 2019. i will get 4 years experience until the end ofcovid 19 ended. and then i will be find my experience to work in Yayasan BOPKRI until now.</p>
-        </section> -->
-    <!-- </div> -->
-
-    <!-- <section class="m-3 p-3">
-        <h2 class="font-bold text-2xl m-3 p-3">Hobby</h2>
-        <p>now i can tell you about my hobbies</p>
-                <li> Reading. every morning after wake up, i will be read the  news. i can do it since i studied in univercity</li>
-                <li>Listen Music. for this hobbies started when i 15th years old. And my favorite sing i give you link to hear</li>
-    </section> -->
-
-    <div class="display-block flex max-w-lg">
-        <section class="m-2 p-2"><p>jawa ==> <button type="button"> <a href="https://youtu.be/ea955RBo1_Y?si=k6xP3ELL4e0iJ-1h" class="bg-orange-500 text-white font- font-bold"> klik here </a></button> or click the link below</li></p> 
+    <!-- bagian musik -->
+    <div class="container px-[16px] md:flex py-24">
+        <section class="m-2 p-2"><p>jawa ==> <button class="hover:bg-orange-700" type="button"> <a href="https://youtu.be/ea955RBo1_Y?si=k6xP3ELL4e0iJ-1h" class="bg-orange-500 text-white font- font-bold"> klik here </a></button> or click the link below</li></p> 
             <iframe width="500" height="280" src="https://www.youtube.com/embed/ea955RBo1_Y?si=k6xP3ELL4e0iJ-1h" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></section>
-        <section class="m-2 p-2"><p>Indonesia ==> <button type="button"> <a href="https://youtu.be/xFM6U9dxn90?si=4oD_0gcXXOA0FO_0" class="bg-orange-500 text-white font- font-bold"> klik here </a></button> or click the link below</li></p> 
+    
+        <section class="m-2 p-2"><p>Indonesia ==> <button class="hover:bg-orange-700" type="button"> <a href="https://youtu.be/xFM6U9dxn90?si=4oD_0gcXXOA0FO_0" class="bg-orange-500 text-white font- font-bold"> klik here </a></button> or click the link below</li></p> 
             <iframe width="500" height="280" src="https://www.youtube.com/embed/xFM6U9dxn90?si=4oD_0gcXXOA0FO_0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></section>
-        <section class="m-2 p-2"><p>Religius ==> <button type="button"> <a href="https://youtu.be/tB0t9hzOJiE?si=m7aLLJGWuxImUG07" class="bg-orange-500 text-white font- font-bold"> klik here </a></button> or click the link below</li></p> 
+    
+        <section class="m-2 p-2"><p>Religius ==> <button class="hover:bg-orange-700" type="button"> <a href="https://youtu.be/tB0t9hzOJiE?si=m7aLLJGWuxImUG07" class="bg-orange-500 text-white font- font-bold"> klik here </a></button> or click the link below</li></p> 
             <iframe width="500" height="280" src="https://www.youtube.com/embed/tB0t9hzOJiE?si=m7aLLJGWuxImUG07" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></section>
     </div>
-    
-    <footer class="text-white sm:bg-orange-500 md:bg-orange-500 lg:bg-orange-500 xl:bg-orange-500 text-center p-3 font-bold position:absolute">
+
+    <!-- bagian footer -->
+    <footer class="text-white bg-orange-500 text-center p-3 font-bold position:absolute bottom-0 left-0 right-0">
         <p>copyright &copy; 2024 mulaidariNOL</p>
     </footer>
+    
+    <script>
+
+       function openSidebar() {
+        document.getElementById("sidebar").classList.remove("ml-[-100%]");
+       }
+
+       function closeSidebar() {
+        document.getElementById("sidebar").classList.add("ml-[-100%]");
+       }
+    </script>
 </body>
 </html>

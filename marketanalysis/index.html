@@ -3,26 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>market analys</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>market analysis</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+
 </head>
-<body class="flex flex-col min-height: 100vh xs:bg-white sm:bg-white md:bg-white lg:bg-white xl:bg-white">
-    <header class="bg-white shadow-xl">
+<body class="bg-gray-100">
+    <header class="bg-white shadow-xl w-full fixed">
         <div class="text-white bg-orange-500 text-center p-3 font-bold">mulaidariNOL with donyputraperkas</div>
         <div class="flex justify-between px-[24px] py-[16px] items-center">
             <a href="/milestone-1-donyputraperkasa/index.html"><img src="/milestone-1-donyputraperkasa/image/mulaidariNOL.png" width="200px" alt=""></a>
-            <button class="lg:hidden">
+
+            <button id="open-button" class="lg:hidden" onclick="openSidebar()">
+
                 <i class="fa-solid fa-bars"></i>
             </button>
             <nav class="max-lg:hidden">
                 <ul class="flex gap-8">
-                    <li class="p-2 m-2"><a href="/milestone-1-donyputraperkasa/index.html">home</a></li>
-                    <li class="p-2 m-2"><a href="/milestone-1-donyputraperkasa/aboutme/index.html">about me</a></li>
-                    <li class="p-2 m-2"><a href="/milestone-1-donyputraperkasa/mathlesson/index.html">math lesson</a></li>
-                    <li class="p-2 m-2 font-bold text-1xl bg-orange-500 text-white rounded-lg"><a href="/milestone-1-donyputraperkasa/marketanalysis/index.html">market analysis</a></li>
-                    <li class="p-2 m-2"><a href="/milestone-1-donyputraperkasa/webdesign/index.html">web design</a></li>
-                    <li class="p-2 m-2"><a href="/milestone-1-donyputraperkasa/login/index.html">login</a></li>
+                    <li><a href="/milestone-1-donyputraperkasa/index.html">home</a></li>
+                    <li><a href="/milestone-1-donyputraperkasa/aboutme/index.html">about me</a></li>
+                    <li><a href="/milestone-1-donyputraperkasa/mathlesson/index.html">math lesson</a></li>
+                    <li><a href="/milestone-1-donyputraperkasa/marketanalysis/index.html">market analysis</a></li>
+                    <li><a href="/milestone-1-donyputraperkasa/login/index.html">login</a></li>
                 </ul>
             </nav>
             <div class="search-bar max-lg:hidden">
@@ -32,21 +34,47 @@
         </div>
     </header>
 
-    <main class="m-3 p-3">
-        <h1 class="font-bold text-3xl">market analysis</h1>
-        <p>this pages special for you to growth up your finance. before start growth up your asset, you must be understand about :
-            <ul>
-                <li>share market</li>
-                <li>crypto market</li>
-                <li>ETF</li>
-            </ul>
-        </p>
-        <p> to understand thats word, now you read this explanation below</p>
-    </main>
+    <!-- ini bagian sidebar nya -->
+    <div id="sidebar" class="bg-white w-[240px] h-screen fixed top p-8 shadow-xl ml-[-100%] transition-[margin-left] duration-300 ease-in-out">
 
-    <section class="m-3 p-3">
-        <h2 class="font-bold text-2xl">share market</h2>
-        <p>share market is a market where people can buy and sell shares of a company. The price of the share is based on the company's performance and the demand for the share.</p>
+        <button id="close-button" class="absolute top-4 right-4" onclick="closeSidebar()">
+
+            <i class="fa-solid fa-close absolute top-4 right-4"></i>
+        </button>
+        <nav>
+            <ul >
+                <a href="/milestone-1-donyputraperkasa/index.html"><img src="/gambar/mulaidariNOL.png" width="100px" alt=""></a>
+                <br> <br>
+                <li class="py-2"><a href="/milestone-1-donyputraperkasa/index.html">home</a></li>
+                <li class="py-2"><a href="/milestone-1-donyputraperkasa/aboutme/index.html">about me</a></li>
+                <li  class="py-2"><a href="/milestone-1-donyputraperkasa/mathlesson/index.html">math lesson</a></li>
+                <li  class="py-2"><a href="/milestone-1-donyputraperkasa/marketanalysis/index.html">market analysis</a></li>
+                <li  class="py-2"><a href="/milestone-1-donyputraperkasa/login/index.html">login</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- bagian market analysis -->
+    <!-- ATAS -->
+    <main class="container px-[16px] lg:flex lg:gap-4 mx-auto py-40">
+        <!-- kiri -->
+        <div class="shadow-md rounded-xl bg-white px-[16px] py-[24px] m-4 max-w-lg mx-auto">
+            <h2 class="font-bold text-2xl mb-5">market analysis</h2>
+            <p>this pages special for you to growth up your finance. before start growth up your asset, you must be understand about :
+                <ul>
+                    <li class="list-disc list-inside">share market</li>
+                    <li class="list-disc list-inside">crypto market</li>
+                    <li class="list-disc list-inside">ETF</li>
+                </ul>
+            </p>
+            <p> to understand thats word, now you read this explanation below</p>
+        </div>
+
+        <!-- tengah -->
+        <div class="shadow-md rounded-xl bg-white px-[16px] py-[24px] m-4 max-w-lg mx-auto">
+            <h2 class="font-bold text-2xl mb-5">share market</h2>
+            <p> After graduate from univercity, i get first job in digital printing company in Jogjakarta at 2019. i will get 4 years experience until the end ofcovid 19 ended. and then i will be find my experience to work in Yayasan BOPKRI until now.<p>share market is a market where people can buy and sell shares of a company. The price of the share is based on the company's performance and the demand for the share.</p>
+            <br>
             <table class="border-collapse border-spacing-3 w-75% border border-gray-400 dark:border-gray-500" width="80%">
                 <thead>
                     <tr>
@@ -92,113 +120,130 @@
                         <td class="border border-gray-300 ..."> BCA</td>
                     </tr>
                 </tbody>
-            </table>
-    </section>
+            </table></p>
+        </div>
 
+        <!-- kanan-->
+        <div class="shadow-md rounded-xl bg-white px-[16px] py-[24px] m-4 max-w-lg mx-auto">
+            <h2 class="font-bold text-2xl mb-5">crypto market</h2>
+            <p>crypto market is a market where people can buy and sell digital currencies. The price of the crypto is based on the demand for the crypto and the supply of the crypto. and i think crypto is a next generation finance, mostly like BITCOIN. and you have buy bitcoin in exchange like :
+                <table class="border-collapse border-spacing-3 w-75% border border-gray-400 dark:border-gray-500" width="80%">
+                    <thead>
+                        <tr>
+                            <th class="border border-gray-300 ...">EXCHANGE</th>
+                            <th class="border border-gray-300 ...">type exchange</th>
+                            <th class="border border-gray-300 ...">logo</th>
+                            <th class="border border-gray-300 ...">link refereal</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="border border-gray-300 ...">COINBASE</td>
+                            <td class="border border-gray-300 ...">Foreign Exchange</td>
+                            <td class="border border-gray-300 ..."><img src="/milestone-1-donyputraperkasa/image/coinbase.png" alt="coinbase logo" width="100px"></td>
+                            <td class="border border-gray-300 ..."> </td>
+                        </tr>
+                        <tr>
+                            <td class="border border-gray-300 ...">GATE.IO</td>
+                            <td class="border border-gray-300 ...">Foreign Exchange</td>
+                            <td class="border border-gray-300 ..."><img src="/milestone-1-donyputraperkasa/image/gateio.png" alt="gate.io logo" width="100px"></td>
+                            <td class="border border-gray-300 ..."><a href="https://www.gate.io/signup/AVJCULLA?ref_type=102"> link download</a></td>
+                        </tr>
+                        <tr>
+                            <td class="border border-gray-300 ...">Indodax</td>
+                            <td class="border border-gray-300 ...">Lokal Exchange</td>
+                            <td class="border border-gray-300 ..."><img src="/milestone-1-donyputraperkasa/image/indodax.png" alt="indodax logo" width="100px"></td>
+                            <td class="border border-gray-300 ..."> </td>
+                        </tr>
+                        <tr>
+                            <td class="border border-gray-300 ...">Tokocrypto</td>
+                            <td class="border border-gray-300 ...">Lokal Exchange</td>
+                            <td class="border border-gray-300 ..."><img src="/milestone-1-donyputraperkasa/image/tokocrypto.png" alt="tokocrypto logo" width="100px"></td>
+                            <td class="border border-gray-300 ..."> </td>
+                        </tr>
+                        <tr>
+                            <td class="border border-gray-300 ...">Pintu</td>
+                            <td class="border border-gray-300 ...">Lokal Exchange</td>
+                            <td class="border border-gray-300 ..."><img src="/milestone-1-donyputraperkasa/image/pintu.png" alt="pintu logo" width="100px"></td>
+                            <td class="border border-gray-300 ..."><p>input this "@donyputraperkasa868" in this web <a href="https://pintu.page.link/SXEq1wvgmffoXCtD9" target="_blank">download pintu</a></p></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p class="font-bold"> you must be saving every month with strategi DCA (Dollar Cost Average), this strategi most one favorite by most person to start investment </p>
+            </p>
+        </div>
+    </main>
 
-    <section class="m-3 p-3">
-        <h2 class="font-bold text-2xl">crypto market</h2>
-        <p>crypto market is a market where people can buy and sell digital currencies. The price of the crypto is based on the demand for the crypto and the supply of the crypto. and i think crypto is a next generation finance, mostly like BITCOIN. and you have buy bitcoin in exchange like :
-            <table class="border-collapse border-spacing-3 w-75% border border-gray-400 dark:border-gray-500" width="80%">
-                <thead>
-                    <tr>
-                        <th class="border border-gray-300 ...">EXCHANGE</th>
-                        <th class="border border-gray-300 ...">type exchange</th>
-                        <th class="border border-gray-300 ...">logo</th>
-                        <th class="border border-gray-300 ...">link refereal</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td class="border border-gray-300 ...">COINBASE</td>
-                        <td class="border border-gray-300 ...">Foreign Exchange</td>
-                        <td class="border border-gray-300 ..."><img src="/milestone-1-donyputraperkasa/image/coinbase.png" alt="coinbase logo" width="100px"></td>
-                        <td class="border border-gray-300 ..."> </td>
-                    </tr>
-                    <tr>
-                        <td class="border border-gray-300 ...">GATE.IO</td>
-                        <td class="border border-gray-300 ...">Foreign Exchange</td>
-                        <td class="border border-gray-300 ..."><img src="/milestone-1-donyputraperkasa/image/gateio.png" alt="gate.io logo" width="100px"></td>
-                        <td class="border border-gray-300 ..."><a href="https://www.gate.io/signup/AVJCULLA?ref_type=102"> link download</a></td>
-                    </tr>
-                    <tr>
-                        <td class="border border-gray-300 ...">Indodax</td>
-                        <td class="border border-gray-300 ...">Lokal Exchange</td>
-                        <td class="border border-gray-300 ..."><img src="/milestone-1-donyputraperkasa/image/indodax.png" alt="indodax logo" width="100px"></td>
-                        <td class="border border-gray-300 ..."> </td>
-                    </tr>
-                    <tr>
-                        <td class="border border-gray-300 ...">Tokocrypto</td>
-                        <td class="border border-gray-300 ...">Lokal Exchange</td>
-                        <td class="border border-gray-300 ..."><img src="/milestone-1-donyputraperkasa/image/tokocrypto.png" alt="tokocrypto logo" width="100px"></td>
-                        <td class="border border-gray-300 ..."> </td>
-                    </tr>
-                    <tr>
-                        <td class="border border-gray-300 ...">Pintu</td>
-                        <td class="border border-gray-300 ...">Lokal Exchange</td>
-                        <td class="border border-gray-300 ..."><img src="/milestone-1-donyputraperkasa/image/pintu.png" alt="pintu logo" width="100px"></td>
-                        <td class="border border-gray-300 ..."><p>input this "@donyputraperkasa868" in this web <a href="https://pintu.page.link/SXEq1wvgmffoXCtD9" target="_blank">download pintu</a></p></td>
-                    </tr>
-                </tbody>
-            </table>
-            <p class="font-bold"> you must be saving every month with strategi DCA (Dollar Cost Average), this strategi most one favorite by most person to start investment </p>
-        </p>
-    </section>
-
-    <section class="m-3 p-3">
-        <h2 class="font-bold text-2xl">ETF</h2>
-        <p>ETF is a type of investment fund that invests in a specific stock or index. ETFs are traded on exchanges and can be bought and sold like other stocks. but ETF have a benefit, you can invest with ETF rather than invest directly with stock. </p>
-    </section>
-
-    <div class="m-3 p-3 container mx-auto">
-        <section>
-            <h2 class="font-bold text-2xl">Lets Study about Bitcoin </h2>
-            <table  class="border-collapse border-spacing-3 w-1/2 border border-gray-400 dark:border-gray-500" width="80%">
-                <thead class="align-middle">
-                    <tr>
-                        <th class="border border-gray-300 ...">learn</th>
-                        <th class="border border-gray-300 ...">link</th>
-                    </tr>
-                </thead>
-                <tbody class="align-middle">
-                    <tr>
-                        <td class="border border-gray-300 ...">what is crypto ??</td>
-                        <td class="border border-gray-300 ..."><a href="https://youtu.be/Z9E59O4z5v8?si=JmDLsLx-JxoVj-WB" class="text-blue-500">link 1</a> <br> <a href="https://youtu.be/Z9E59O4z5v8?si=JmDLsLx-JxoVj-WB" class="text-blue-500">link 2</a></td>
-                    </tr>
-                    <tr>
-                        <td class="border border-gray-300 ...">where i buy crypto ??</td>
-                        <td class="border border-gray-300 ..."><a href="https://youtu.be/SrrZj5FYLT0?si=dd0L6EIJJp9NMFhp" class="text-blue-500">link 3</a> <br> <a href="https://youtu.be/6F-pHkRXowc?si=ggceIKuXxTbQ9svL" class="text-blue-500">link 4</a></td>
-                    </tr>
-                    <tr>
-                        <td class="border border-gray-300 ...">im late if buy now ??</td>
-                        <td class="border border-gray-300 ..."><a href="https://youtu.be/C9_2nKY2sBk?si=_oTauj6yQtfIjQvO" class="text-blue-500">link 5</a></td>
-                    </tr>
-                    <tr>
-                        <td class="border border-gray-300 ...">about bitcoin</td>
-                        <td class="border border-gray-300 ...">
-                            <a href="https://youtu.be/e0fbu5QvdWY?si=_Ns2dVANtjeztkeZ" class="text-blue-500"> video 1</a> <br>
-                            <a href="https://youtu.be/gk3uW93IbfI?si=SqBrcFfHZ1tgk4s7" class="text-blue-500">video 2</a> <br>
-                            <a href="https://youtu.be/Z_UMVN0i6qw?si=5lSAlLem9dt5h2N8" class="text-blue-500">video 3</a> <br>
-                            <a href="https://youtu.be/TX6mqvndKpA?si=2bgoAvy0hayNMe1X" class="text-blue-500">video 4</a> 
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
+    <!-- BAWAH -->
+    <div class="container px-[16px] lg:flex lg:gap-4 mx-auto py-10">
+        <!-- kiri -->
+        <div class="shadow-md rounded-xl bg-white px-[16px] py-[24px] lg:w-[30%] m-1">
+                    <h2 class="font-bold text-2xl mb-5">ETF</h2>
+                    <p>ETF is a type of investment fund that invests in a specific stock or index. ETFs are traded on exchanges and can be bought and sold like other stocks. but ETF have a benefit, you can invest with ETF rather than invest directly with stock. </p>
+        </div>
+            
+        <!-- tengah -->
+        <div class="shadow-md rounded-xl bg-white px-[16px] py-[24px] lg:w-[40%] m-1">
+            <h2 class="font-bold text-2xl mb-5">Lets Study about Bitcoin</h2>
+                        <table  class="border-collapse border-spacing-3 border border-gray-400 dark:border-gray-500" width="80%">
+                            <thead class="align-middle">
+                                <tr>
+                                    <th class="border border-gray-300 ...">learn</th>
+                                    <th class="border border-gray-300 ...">link</th>
+                                </tr>
+                            </thead>
+                            <tbody class="align-middle">
+                                <tr>
+                                    <td class="border border-gray-300 ...">what is crypto ??</td>
+                                    <td class="border border-gray-300 ..."><a href="https://youtu.be/Z9E59O4z5v8?si=JmDLsLx-JxoVj-WB" class="text-blue-500">link 1</a> <br> <a href="https://youtu.be/Z9E59O4z5v8?si=JmDLsLx-JxoVj-WB" class="text-blue-500">link 2</a></td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-gray-300 ...">where i buy crypto ??</td>
+                                    <td class="border border-gray-300 ..."><a href="https://youtu.be/SrrZj5FYLT0?si=dd0L6EIJJp9NMFhp" class="text-blue-500">link 3</a> <br> <a href="https://youtu.be/6F-pHkRXowc?si=ggceIKuXxTbQ9svL" class="text-blue-500">link 4</a></td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-gray-300 ...">im late if buy now ??</td>
+                                    <td class="border border-gray-300 ..."><a href="https://youtu.be/C9_2nKY2sBk?si=_oTauj6yQtfIjQvO" class="text-blue-500">link 5</a></td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-gray-300 ...">about bitcoin</td>
+                                    <td class="border border-gray-300 ...">
+                                        <a href="https://youtu.be/e0fbu5QvdWY?si=_Ns2dVANtjeztkeZ" class="text-blue-500"> video 1</a> <br>
+                                        <a href="https://youtu.be/gk3uW93IbfI?si=SqBrcFfHZ1tgk4s7" class="text-blue-500">video 2</a> <br>
+                                        <a href="https://youtu.be/Z_UMVN0i6qw?si=5lSAlLem9dt5h2N8" class="text-blue-500">video 3</a> <br>
+                                        <a href="https://youtu.be/TX6mqvndKpA?si=2bgoAvy0hayNMe1X" class="text-blue-500">video 4</a> 
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+        </div>
+            
+        <!-- kanan-->
+        <div class="shadow-md rounded-xl bg-white px-[16px] py-[24px] lg:w-[30%] m-1">
+             <h2 class="font-bold text-2xl mb-5">how to join</h2>
+                        <p>les to Join my grup crypto, lets read this rules :
+                            <ul type="square">
+                                <li class="list-disc list-inside"> Payment methode : cash or transfer</li>
+                                <li class="list-disc list-inside"> Proof of payment : screenshot</li>
+                                <li class="list-disc list-inside"> send your sreenshot to : donyputraperkasa@gmail</li>
+                            </ul>
+                        </p>
+        </div>
     </div>
-    <section class="m-3 p-3">
-        <h2 class="font-bold text-2xl">How To Join ??</h2>
-        <p>les to Join my grup crypto, lets read this rules :
-            <ul type="square">
-                <li class="list-disc list-inside"> Payment methode : cash or transfer</li>
-                <li class="list-disc list-inside"> Proof of payment : screenshot</li>
-                <li class="list-disc list-inside"> send your sreenshot to : donyputraperkasa@gmail</li>
-            </ul>
-        </p>
-    </section>
- 
-<footer class="text-white sm:bg-orange-500 md:bg-orange-500 lg:bg-orange-500 xl:bg-orange-500 text-center p-3 font-bold position:absolute">
-    <p>copyright &copy; 2024 mulaidariNOL</p>
-</footer>
+
+    <!-- bagian footer  -->
+    <footer class="text-white bg-orange-500 text-center p-3 font-bold position:absolute bottom-0 left-0 right-0">
+        <p>copyright &copy; 2024 mulaidariNOL</p>
+    </footer>
+    <script>
+
+       function openSidebar() {
+        document.getElementById("sidebar").classList.remove("ml-[-100%]");
+       }
+
+       function closeSidebar() {
+        document.getElementById("sidebar").classList.add("ml-[-100%]");
+       }
+    </script>
 </body>
 </html>

@@ -3,94 +3,94 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>about dony</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>home</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <style>
-        body {
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-        }
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
 
-        section {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            flex: 1;
-        }
-        /* @media screen and (max-width: 576px) {
-            body {
-                display: flex;
-                flex-direction: column;
-                min-height: 50vh;
-            }
-            
-        }
-        @media screen and (max-width: 768px) {
-            body {
-                display: flex;
-                flex-direction: column;
-                min-height: 70vh;
-            }
-        }
-
-        @media screen and (max-width: 992px) {
-            body {
-                display: flex;
-                flex-direction: column;
-                min-height: 80vh;
-            }
-            
-        }
-
-        @media screen and (max-width: 1200px) {
-            body {
-                display: flex;
-                flex-direction: column;
-                min-height: 100vh;
-            }
-            
-        } */
-    </style>
 </head>
-<body>
-    <header class="bg-white shadow-xl">
-            <div class="text-white bg-orange-500 text-center p-3 font-bold">mulaidariNOL with donyputraperkas</div>
-            <div class="flex justify-between px-[24px] py-[16px] items-center">
-                <a href="/milestone-1-donyputraperkasa/index.html"><img src="/milestone-1-donyputraperkasa/image/mulaidariNOL.png" width="200px" alt=""></a>
-                <button class="lg:hidden">
-                    <i class="fa-solid fa-bars"></i>
-                </button>
-                <nav class="max-lg:hidden">
-                    <ul class="flex gap-8">
-                        <li class="p-2 m-2 font-bold text-1xl bg-orange-500 text-white rounded-lg"><a href="/milestone-1-donyputraperkasa/index.html">home</a></li>
-                        <li class="p-2 m-2"><a href="/milestone-1-donyputraperkasa/aboutme/index.html">about me</a></li>
-                        <li class="p-2 m-2"><a href="/milestone-1-donyputraperkasa/mathlesson/index.html">math lesson</a></li>
-                        <li class="p-2 m-2"><a href="/milestone-1-donyputraperkasa/marketanalysis/index.html">market analysis</a></li>
-                        <li class="p-2 m-2"><a href="/milestone-1-donyputraperkasa/webdesign/index.html">web design</a></li>
-                        <li class="p-2 m-2"><a href="/milestone-1-donyputraperkasa/login/index.html">login</a></li>
-                    </ul>
-                </nav>
-                <div class="search-bar max-lg:hidden">
-                    <input type="text" placeholder="search" class="p-2 m-2 border">
-                    <button class="hover:bg-orange-700 bg-orange-500 text-white p-2 m-2 w-20 rounded-lg">search</button>
-                </div>
+<body class="bg-gray-100">
+    <header class="bg-white shadow-xl w-full fixed">
+        <div class="text-white bg-orange-500 text-center p-3 font-bold">mulaidariNOL with donyputraperkas</div>
+        <div class="flex justify-between px-[24px] py-[16px] items-center">
+            <a href="/milestone-1-donyputraperkasa/index.html"><img src="/milestone-1-donyputraperkasa/image/mulaidariNOL.png" width="200px" alt=""></a>
+
+            <button id="open-button" class="lg:hidden" onclick="openSidebar()">
+
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <nav class="max-lg:hidden">
+                <ul class="flex gap-8">
+                    <li><a href="/milestone-1-donyputraperkasa/index.html">home</a></li>
+                    <li><a href="/milestone-1-donyputraperkasa/aboutme/index.html">about me</a></li>
+                    <li><a href="/milestone-1-donyputraperkasa/mathlesson/index.html">math lesson</a></li>
+                    <li><a href="/milestone-1-donyputraperkasa/marketanalysis/index.html">market analysis</a></li>
+                    <li><a href="/milestone-1-donyputraperkasa/login/index.html">login</a></li>
+                </ul>
+            </nav>
+            <div class="search-bar max-lg:hidden">
+                <input type="text" placeholder="search" class="p-2 m-2 border">
+                <button class="hover:bg-orange-700 bg-orange-500 text-white p-2 m-2 w-20 rounded-lg">search</button>
             </div>
-        </header>
+        </div>
     </header>
-    <section class="text-center">
-        <img src="image/mulaidariNOL.png" width="40%" alt="" class="p-3 m-3 mx-auto">
-        <p>lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, ipsa. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, ipsa.</p>
-        <p>lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, ipsa. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, ipsa.</p>
-        <p>lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, ipsa. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, ipsa.</p>
-        <p>lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, ipsa. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, ipsa.</p>
-        <p>lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, ipsa. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, ipsa.</p>
-        <p>lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, ipsa. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, ipsa.</p>
-    </section>
-  
-    <footer class="text-white sm:bg-orange-500 md:bg-orange-500 lg:bg-orange-500 xl:bg-orange-500 text-center p-3 font-bold position:absolute">
+
+    <!-- ini bagian sidebar nya -->
+    <div id="sidebar" class="bg-white w-[240px] h-screen fixed top p-8 shadow-xl ml-[-100%] transition-[margin-left] duration-300 ease-in-out">
+
+        <button id="close-button" class="absolute top-4 right-4" onclick="closeSidebar()">
+
+            <i class="fa-solid fa-close absolute top-4 right-4"></i>
+        </button>
+        <nav>
+            <ul >
+                <a href="/milestone-1-donyputraperkasa/index.html"><img src="/gambar/mulaidariNOL.png" width="100px" alt=""></a>
+                <br> <br>
+                <li class="py-2"><a href="/milestone-1-donyputraperkasa/index.html">home</a></li>
+                <li class="py-2"><a href="/milestone-1-donyputraperkasa/aboutme/index.html">about me</a></li>
+                <li  class="py-2"><a href="/milestone-1-donyputraperkasa/mathlesson/index.html">math lesson</a></li>
+                <li  class="py-2"><a href="/milestone-1-donyputraperkasa/marketanalysis/index.html">market analysis</a></li>
+                <li  class="py-2"><a href="/milestone-1-donyputraperkasa/login/index.html">login</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- bagian home -->
+    <main class="container px-[16px] lg:flex lg:gap-4 mx-auto py-24">
+        <div class="lg:w-[100%] w-[90%] mx-auto">
+        <section>
+            <h2 class="text-3xl font-bold mb-[24px]">wellcome to my website</h2>
+            <ul class="bg-white">
+                <li class="shadow-md rounded-xl bg-white mb-6">
+                    <div>
+                        <img class="max-h-[100%] w-full object-cover" src="/gambar/mulaidariNOL.png" alt="bubududu">
+                    </div>
+                    <div class="p-[24px]">
+                        <h3 class="text-xl font-bold mb-[8px]">introduction</h3>
+                        <p class="mb-[8px]">isi nya untuk sub judul 1 bagian ini, panjang gapapa sih panjang panjang panjang panjang panjang panjang panjang panjang panjang panjang panjang panjang panjang panjang panjang panjang panjang panjang panjang panjang panjang panjang panjang panjang panjang panjang panjang panjang panjang panjang panjang panjang panjang panjang panjang panjang panjang panjang panjang panjang panjang panjang "Kami bangsa Indonesia dengan ini menyatakan kemerdekaan Indonesia"
+                        "Hal-hal jang mengenai pemindahan kekoeasaan d.l.l., diselenggarakan dengan tjara seksama dan dalam tempo jang sesingkat-singkatnja"</p>
+                        <p>"Djakarta, hari 17 boelan 8 tahoen 05"</p>
+                        <p>"Atas nama bangsa Indonesia"</p>
+                        <p>"Soekarno - Hatta"</p>
+                    </div>
+                </li>
+            </ul>
+        </section>      
+    </main>
+
+    <!-- bagian footer -->
+    <footer class="text-white bg-orange-500 text-center p-3 font-bold position:absolute bottom-0 left-0 right-0">
         <p>copyright &copy; 2024 mulaidariNOL</p>
     </footer>
+
+    <script>
+
+       function openSidebar() {
+        document.getElementById("sidebar").classList.remove("ml-[-100%]");
+       }
+
+       function closeSidebar() {
+        document.getElementById("sidebar").classList.add("ml-[-100%]");
+       }
+    </script>
 </body>
 </html>
